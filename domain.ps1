@@ -3,7 +3,7 @@
 
 # Change from DHCP to static IP using the same IP
 # Get the name of the network adapter
-$nicname = Get-NetAdapter  | select -ExpandProperty "name"
+$nicname = Get-NetAdapter  | select -ExpandProperty "Ethernet"
 Write-Host -ForegroundColor yellow $nicname 
 
 # Get current IP Address, Prefix Length (subnet mask), and gateway
